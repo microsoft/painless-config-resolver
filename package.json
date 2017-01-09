@@ -31,6 +31,12 @@
   "license": "MIT",
   "repository": "Microsoft/painless-config-resolver",
   "dependencies": {
+    "app-root-path": "^2.0.1",
+    "async": "^2.1.4",
+    "environment-configuration-resolver": "0.0.1",
+    "function-configuration-resolver": "0.0.1",
+    "keyvault-configuration-resolver": "^0.9.7",
+    "painless-config-as-code": "0.0.2"
   },
   "devDependencies": {
     "eslint": "^3.12.0"
