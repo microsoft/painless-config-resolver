@@ -28,11 +28,11 @@ with any additional questions or comments.
 
 # Changes
 
-## 0.0.19
+## 0.1.4
 
 - Able to instantiate without calling the module as a function
 - No longer requires the presence of a `./config` graph folder
 
-## 0.0.18
+## 0.1.3
 
 - First stable release
