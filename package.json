@@ -37,7 +37,7 @@
     "environment-configuration-resolver": "^0.1.1",
     "keyvault-configuration-resolver": "^0.9.7",
     "object-path": "^0.11.3",
-    "painless-config-as-code": "github:microsoft/painless-config-as-code#develop"
+    "painless-config-as-code": "0.0.3"
   },
   "devDependencies": {
     "eslint": "^3.12.0"
