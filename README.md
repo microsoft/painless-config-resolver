@@ -85,6 +85,12 @@ with any additional questions or comments.
 
 # Changes
 
+## 1.0.0
+
+- Configuration folder `./config` is no longer implicit.
+- Automatic graph configuration must be specified through `package.json` properties under `painlessConfigObjectPackages` and/or environment variables pointing at config-containing npm and/or directories. To maintain the previous behavior, configure an environment or config-as-code variable named `CONFIGURATION_GRAPH_DIRECTORY` or the option `directoryName` with the value `config`.
+- Adds CONFIGURATION_PACKAGES support for dynamic/environment-based configuration package inclusion
+
 ## 0.1.4
 
 - Able to instantiate without calling the module as a function
