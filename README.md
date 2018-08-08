@@ -85,6 +85,10 @@ with any additional questions or comments.
 
 # Changes
 
+## 1.0.3
+
+- Newer KeyVault client refreshes the dependency chain
+
 ## 1.0.1
 
 - Newer KeyVault dependency version caches responses for a performance win in heavily-configured apps
