@@ -85,6 +85,10 @@ with any additional questions or comments.
 
 # Changes
 
+## 1.1.0
+
+- Deep merge is configured to overwrite arrays instead of merging them
+
 ## 1.0.3
 
 - Newer KeyVault client refreshes the dependency chain
