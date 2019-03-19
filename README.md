@@ -85,6 +85,10 @@ with any additional questions or comments.
 
 # Changes
 
+## 1.1.1
+
+- Moves to newer config-as-code, supporting app-based env overrides
+
 ## 1.1.0
 
 - Deep merge is configured to overwrite arrays instead of merging them
