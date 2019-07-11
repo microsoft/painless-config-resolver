@@ -1,6 +1,6 @@
 {
   "name": "painless-config-resolver",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Yet another opinionated Node.js configuration library providing a set of default resolvers to enable rapid, rich configuration object graphs powered by the deployment environment, config-as-code, and Azure KeyVault secrets.",
   "main": "lib/index.js",
   "engines": {
@@ -32,14 +32,11 @@
   "repository": "Microsoft/painless-config-resolver",
   "dependencies": {
     "app-root-path": "2.2.1",
-    "async": "3.0.1",
+    "async": "3.1.0",
     "deepmerge": "3.2.0",
-    "environment-configuration-resolver": "0.1.1",
-    "keyvault-configuration-resolver": "1.0.2",
+    "environment-configuration-resolver": "0.1.2",
+    "keyvault-configuration-resolver": "1.0.3",
     "object-path": "0.11.4",
     "painless-config-as-code": "1.0.0"
-  },
-  "devDependencies": {
-    "eslint": "5.16.0"
   }
 }
