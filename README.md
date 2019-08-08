@@ -85,6 +85,10 @@ with any additional questions or comments.
 
 # Changes
 
+## 1.1.4
+
+- Updated dependencies
+
 ## 1.1.3
 
 - Updated dependencies
