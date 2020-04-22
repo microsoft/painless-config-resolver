@@ -2,6 +2,8 @@
 
 Yet another opinionated Node.js configuration library providing a set of default resolvers to enable rapid, rich configuration object graphs powered by the deployment environment, config-as-code, and Azure KeyVault secrets.
 
+This library now requires a modern Node LTS+ version and uses native promises.
+
 ## Resolving variables into a simple configuration graph
 
 This library takes an object (a configuration graph) containing simple variables or
@@ -22,12 +24,11 @@ In lieu of a configuration graph object, a special `config/` directory structure
 with JSON and JS files can be used to build the configuration object at startup,
 making it easy to compartmentalize values.
 
-## Part of the painless-config family
+## Built on painless-config
 
 This module is a part of the `painless-config` family of configuration libraries.
 
 - [painless-config](https://github.com/Microsoft/painless-config): resolving a variable from an `env.json` file or the environment with a simple `get(key)` method
-- [painless-config-as-code](https://github.com/Microsoft/painless-config-as-code): resolving a variable from an environment-specific configuration file located within a repository, enabling configuration-as-code, including code reviews and pull requests for config changes.
 
 ## How to use
 
@@ -41,13 +42,10 @@ const graph = {
   app: 'my app',
 };
 
-resolver.resolve(graph, (error, config) => {
-  if (error) {
-    throw error;
-  }
-
+async function myApp() {
+  const config = await resolver.resolve(graph);
   // ... config has the resolved values ...
-});
+}
 ```
 
 After calling `resolve` the `config` object might look like:
@@ -59,7 +57,13 @@ After calling `resolve` the `config` object might look like:
 }
 ```
 
-### Unofficial but useful
+## Consolidation
+
+As of v2.0.0, this library has merged in the `painless-config-as-code`, environment, and keyvault 
+environment providers to make it easier to keep the library up-to-date. This admits that this library
+is really coupled with KeyVault enough that it is OK to include those dependencies.
+
+## Unofficial but useful
 
 This component was developed by the Open Source Programs Office at Microsoft. The OSPO team
 uses Node.js for some of its applications and has found this component to be useful. We are
@@ -84,6 +88,12 @@ contact [opencode@microsoft.com](mailto:opencode@microsoft.com)
 with any additional questions or comments.
 
 # Changes
+
+## 2.0.0
+
+- Node >= 10.x required (suggest LTS 12+)
+- Callbacks removed. The library is built on native Promises now.
+- Merges dependent modules `painless-config-as-code`, `environment-configuration-resolver`, `keyvault-configuration-resolver` as native capabilities to reduce the package count and improve updates, publishing and debugging
 
 ## 1.1.4
 
