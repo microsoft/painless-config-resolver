@@ -12,6 +12,7 @@ script and uses configuration providers, in order, to try and resolve.
 As configured by default this means variables can come from:
 
 - environment variables always win
+- `.env` dotfile
 - painless-config development environment `env.json` file outside an app's root
 - configuration-as-code JSON file, per-environment
 
@@ -89,7 +90,11 @@ with any additional questions or comments.
 
 # Changes
 
-## 2.0.0
+## 3.0.0
+
+- Adds support for `.env` (dotfiles) in a manner similar to `painless-config`
+
+## 2.0.1
 
 - Node >= 10.x required (suggest LTS 12+)
 - Callbacks removed. The library is built on native Promises now.
