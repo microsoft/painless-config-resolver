@@ -92,7 +92,7 @@ with any additional questions or comments.
 
 # Changes
 
-## 4.0.0
+## 4.0.1
 
 - Adds support for `volumefile:` for resolving mounted volume secrets in some environments
 
