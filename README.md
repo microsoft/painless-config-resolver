@@ -12,6 +12,7 @@ script and uses configuration providers, in order, to try and resolve.
 As configured by default this means variables can come from:
 
 - environment variables always win
+- mounted volume files
 - `.env` dotfile
 - painless-config development environment `env.json` file outside an app's root
 - configuration-as-code JSON file, per-environment
@@ -19,6 +20,7 @@ As configured by default this means variables can come from:
 Variables themselves will be sent to other resolvers, so the values can be:
 
 - direct values from variables
+- values read from a Kubernetes mounted volume
 - KeyVault secrets to resolve at runtime from Azure KeyVault
 
 In lieu of a configuration graph object, a special `config/` directory structure
@@ -89,6 +91,10 @@ contact [opencode@microsoft.com](mailto:opencode@microsoft.com)
 with any additional questions or comments.
 
 # Changes
+
+## 4.0.0
+
+- Adds support for `volumefile:` for resolving mounted volume secrets in some environments
 
 ## 3.0.0
 
