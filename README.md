@@ -92,6 +92,10 @@ with any additional questions or comments.
 
 # Changes
 
+## 4.0.5
+
+- Dependency update for `object-path` package
+
 ## 4.0.4
 
 - Application name for config-as-code also supports environment resolution of `APPLICATION_NAME`
